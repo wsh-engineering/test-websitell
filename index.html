@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>全力機電有限公司</title>
+
+  <meta
+    name="description"
+    content="全力機電有限公司，提供機電工程、水電工程、設備安裝及相關工程服務。"
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --blue: #315d7d;
+      --blue-dark: #23465f;
+      --dark: #25292c;
+      --gray: #737a80;
+      --light: #f5f6f6;
+      --line: #e1e4e6;
+      --white: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      color: var(--dark);
+      background: white;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin: auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      z-index: 100;
+
+      border-bottom: 1px solid rgba(255,255,255,.18);
+    }
+
+    .nav {
+      height: 80px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      list-style: none;
+
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.85);
+      font-size: 14px;
+
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-contact {
+      padding: 9px 18px;
+
+      border: 1px solid rgba(255,255,255,.7);
+
+      color: white !important;
+    }
+
+    .nav-contact:hover {
+      background: white;
+      color: var(--dark) !important;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 670px;
+
+      display: flex;
+      align-items: center;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(18,27,34,.90),
+          rgba(18,27,34,.60),
+          rgba(18,27,34,.25)
+        ),
+        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=85");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      padding-top: 70px;
+    }
+
+    .hero-small {
+      font-size: 13px;
+      letter-spacing: 3px;
+
+      color: #c6d5df;
+
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.25;
+
+      max-width: 750px;
+
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 560px;
+
+      color: #d3dade;
+
+      font-size: 16px;
+
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+
+      padding: 12px 25px;
+
+      font-size: 14px;
+
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.65);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--dark);
+    }
+
+
+    /* =========================
+       COMMON
+    ========================= */
+
+    section {
+      scroll-margin-top: 30px;
+    }
+
+    .section-label {
+      color: var(--blue);
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 34px;
+      line-height: 1.4;
+
+      margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      padding: 100px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+
+      gap: 90px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--gray);
+      font-size: 15px;
+
+      margin-bottom: 15px;
+    }
+
+    .about-image {
+      margin-top: 60px;
+
+      height: 420px;
+
+      overflow: hidden;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      padding: 100px 0;
+
+      background: var(--light);
+    }
+
+    .services-head {
+      margin-bottom: 50px;
+    }
+
+    .service-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .service-item {
+      min-height: 105px;
+
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr;
+
+      align-items: center;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-number {
+      color: var(--blue);
+
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .service-item h3 {
+      font-size: 21px;
+    }
+
+    .service-item p {
+      color: var(--gray);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects {
+      padding: 100px 0;
+    }
+
+    .projects-head {
+      margin-bottom: 45px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .project {
+      height: 360px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: .4s;
+    }
+
+    .project:hover img {
+      transform: scale(1.04);
+    }
+
+    .project::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          0deg,
+          rgba(0,0,0,.62),
+          transparent 55%
+        );
+    }
+
+    .project-name {
+      position: absolute;
+
+      left: 25px;
+      bottom: 22px;
+
+      z-index: 2;
+
+      color: white;
+
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      padding: 100px 0;
+
+      background: var(--blue-dark);
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 100px;
+    }
+
+    .contact .section-label {
+      color: #a9cadf;
+    }
+
+    .contact .section-title {
+      color: white;
+    }
+
+    .contact-intro {
+      color: #c4d0d8;
+
+      font-size: 14px;
+
+      max-width: 470px;
+    }
+
+    .contact-list {
+      border-top: 1px solid rgba(255,255,255,.18);
+    }
+
+    .contact-item {
+      padding: 18px 0;
+
+      border-bottom: 1px solid rgba(255,255,255,.18);
+    }
+
+    .contact-item span {
+      display: block;
+
+      color: #9eb4c3;
+
+      font-size: 11px;
+      letter-spacing: 1px;
+
+      margin-bottom: 3px;
+    }
+
+    .contact-item strong {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 28px 0;
+
+      background: #18242c;
+      color: #84939d;
+
+      font-size: 11px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media(max-width: 850px) {
+
+      .nav-links li:not(:last-child) {
+        display: none;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+      }
+
+      .service-item {
+        grid-template-columns: 60px 1fr;
+      }
+
+      .service-item p {
+        grid-column: 2;
+
+        padding-bottom: 22px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .project:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width: 600px) {
+
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .nav {
+        height: 70px;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .nav-contact {
+        padding: 7px 12px;
+        font-size: 12px !important;
+      }
+
+      .hero {
+        min-height: 620px;
+
+        background-position: 60% center;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .hero-buttons {
+        flex-wrap: wrap;
+      }
+
+      .about,
+      .services,
+      .projects,
+      .contact {
+        padding: 75px 0;
+      }
+
+      .section-title {
+        font-size: 29px;
+      }
+
+      .about-image {
+        height: 300px;
+        margin-top: 40px;
+      }
+
+      .service-item {
+        padding: 20px 0;
+
+        grid-template-columns: 45px 1fr;
+      }
+
+      .service-item h3 {
+        font-size: 18px;
+      }
+
+      .service-item p {
+        padding-bottom: 0;
+        margin-top: 5px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project,
+      .project:last-child {
+        grid-column: auto;
+
+        height: 300px;
+      }
+
+      .footer-content {
+        display: block;
+      }
+
+      .footer-content span:last-child {
+        display: block;
+
+        margin-top: 5px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <div class="container nav">
+
+    <a href="#home" class="logo">
+      全力機電有限公司
+    </a>
+
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#about">
+          關於我們
+        </a>
+      </li>
+
+      <li>
+        <a href="#services">
+          服務項目
+        </a>
+      </li>
+
+      <li>
+        <a href="#projects">
+          工程實績
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#contact"
+          class="nav-contact"
+        >
+          聯絡我們
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+  <div class="container hero-content">
+
+    <div class="hero-small">
+      全力機電有限公司
+    </div>
+
+    <h1>
+      專業施工，<br>
+      用心做好每一項工程。
+    </h1>
+
+    <p>
+      提供機電工程、水電工程、
+      設備安裝及相關工程服務，
+      重視施工品質與現場配合。
+    </p>
+
+
+    <div class="hero-buttons">
+
+      <a
+        href="#services"
+        class="btn btn-primary"
+      >
+        查看服務項目
+      </a>
+
+      <a
+        href="#contact"
+        class="btn btn-outline"
+      >
+        聯絡我們
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+  <div class="container">
+
+
+    <div class="about-grid">
+
+
+      <div>
+
+        <div class="section-label">
+          關於全力
+        </div>
+
+        <h2 class="section-title">
+          專注工程施工，<br>
+          重視品質與責任。
+        </h2>
+
+      </div>
+
+
+      <div class="about-text">
+
+        <p>
+          全力機電有限公司提供機電、
+          水電、設備安裝及相關工程服務，
+          依照工程需求與現場條件進行施工。
+        </p>
+
+        <p>
+          我們重視施工品質、工程進度與現場配合，
+          以穩定、負責的態度完成每一項工作。
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="about-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=85"
+        alt="全力機電工程施工"
+      >
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+  <div class="container">
+
+
+    <div class="services-head">
+
+      <div class="section-label">
+        服務項目
+      </div>
+
+      <h2 class="section-title">
+        專業工程服務
+      </h2>
+
+    </div>
+
+
+
+    <div class="service-list">
+
+
+      <div class="service-item">
+
+        <div class="service-number">
+          01
+        </div>
+
+        <h3>
+          機電工程
+        </h3>
+
+        <p>
+          機電設備、電力系統及相關工程施工。
+        </p>
+
+      </div>
+
+
+
+      <div class="service-item">
+
+        <div class="service-number">
+          02
+        </div>
+
+        <h3>
+          水電工程
+        </h3>
+
+        <p>
+          水電、配管及相關工程施工。
+        </p>
+
+      </div>
+
+
+
+      <div class="service-item">
+
+        <div class="service-number">
+          03
+        </div>
+
+        <h3>
+          設備安裝
+        </h3>
+
+        <p>
+          配合現場需求進行設備安裝與配置。
+        </p>
+
+      </div>
+
+
+
+      <div class="service-item">
+
+        <div class="service-number">
+          04
+        </div>
+
+        <h3>
+          工程整合
+        </h3>
+
+        <p>
+          配合工程進度進行施工與現場協調。
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section class="projects" id="projects">
+
+  <div class="container">
+
+
+    <div class="projects-head">
+
+      <div class="section-label">
+        工程實績
+      </div>
+
+      <h2 class="section-title">
+        工程施工案例
+      </h2>
+
+    </div>
+
+
+
+    <div class="project-grid">
+
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85"
+          alt="機電工程"
+        >
+
+        <div class="project-name">
+          機電工程
+        </div>
+
+      </div>
+
+
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=85"
+          alt="設備安裝"
+        >
+
+        <div class="project-name">
+          設備安裝
+        </div>
+
+      </div>
+
+
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85"
+          alt="工程施工"
+        >
+
+        <div class="project-name">
+          工程施工
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+  <div class="container contact-grid">
+
+
+    <div>
+
+      <div class="section-label">
+        聯絡我們
+      </div>
+
+      <h2 class="section-title">
+        有工程需求，<br>
+        歡迎與我們聯繫。
+      </h2>
+
+      <p class="contact-intro">
+        若有工程合作、施工需求或相關問題，
+        歡迎透過電話、Email 或其他聯絡方式
+        與全力機電有限公司聯繫。
+      </p>
+
+    </div>
+
+
+
+    <div class="contact-list">
+
+
+      <div class="contact-item">
+
+        <span>
+          電話
+        </span>
+
+        <strong>
+          05-
+        </strong>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <span>
+          Email
+        </span>
+
+        <strong>
+          j.qi.lin1997@gmail.com
+        </strong>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <span>
+          地址
+        </span>
+
+        <strong>
+          嘉義縣太保市光復路22號
+        </strong>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <span>
+          LINE
+        </span>
+
+        <strong>
+          @
+        </strong>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="container footer-content">
+
+    <span>
+      © 2026 全力機電有限公司
+    </span>
+
+    <span>
+      專業機電・水電工程服務
+    </span>
+
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
